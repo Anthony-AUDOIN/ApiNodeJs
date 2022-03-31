@@ -2,7 +2,7 @@
 
 ![forthebadge](READMEDATA/made-with-nodejs.svg) ![forthebadge](READMEDATA/powered-by-hapipal.svg)
 
-Le projet PTLP est une solution pour le commerce Lin'Epicerie qui souhaité avoir une application de gestion des dates de péremption de ses produits mis en rayon qui pourrait être géré le plus simplement possible par les gérants et les salariés avec des technologies de scan de code barre et de récupération des dates. Ce projet a été fait dans le cadre d'un projet tuteuré de Licence Professionnelle DWDB.
+Projet NodeJs permettant la mise en place d'une API.
 
 ## Pour commencer
 
@@ -10,13 +10,19 @@ Veuillez cloner le repository [NodeJs - API](https://github.com/Anthony-AUDOIN/A
 
 ### Pré-requis
 
-Il est nécessaire d'avoir une environnement de developpement web tel que WAMP.
+Il est nécessaire d'avoir un environnement de développement web tel que WAMP.
 
 ### Installation
 
-Pour l'installation, il suffit juste de lancer le téléchargement des packages via NPM grace a la commande : 
-```npm install```
-
+Pour l'installation, il suffit juste de lancer le téléchargement des packages via NPM grace a la commande 
+```npm install```,
+et de changer les propriétés de connexion a la BD dans le fichier /server/manifest.js : 
+```js
+ host: process.env.DB_HOST || 'localhost',
+ user: process.env.DB_USER || 'root',
+ password: process.env.DB_PASSWORD || '',
+ database: process.env.DB_DATABASE || 'apinode',
+```
 ## Démarrage
 
 Pour finir, il suffit de lancer l'API avec la commande  ```npm start``` 
